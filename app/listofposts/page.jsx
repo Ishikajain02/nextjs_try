@@ -18,17 +18,17 @@ export default function ListOfPosts() {
 
     fetchData();
   }, []);
+  
 
   return (
     <div>
       <p>List of Posts</p>
-      {Array.isArray(posts) ? (
-        posts.map((post, index) => (
-          <p key={index}>{post.description}</p>
+      {
+        posts.map((post) => (
+          <p>{post.description}</p>
         ))
-      ) : (
-        <p>Loading...</p>
-      )}
+      
+        }
     </div>
   );
 }
